@@ -1,0 +1,5 @@
+/home/kosta/client1/build/CMakeFiles/control.dir
+/home/kosta/client1/build/CMakeFiles/control_test.dir
+/home/kosta/client1/build/CMakeFiles/test.dir
+/home/kosta/client1/build/CMakeFiles/edit_cache.dir
+/home/kosta/client1/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/control_test.dir/tests/control_test.cpp.o -o control_test  libcontrol.a 

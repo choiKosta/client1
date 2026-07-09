@@ -1,0 +1,19 @@
+Start testing: Jul 07 17:22 KST
+----------------------------------------------------------
+1/1 Testing: control_test
+1/1 Test: control_test
+Command: "/home/kosta/client1/build/control_test"
+Directory: /home/kosta/client1/build
+"control_test" start time: Jul 07 17:22 KST
+Output:
+----------------------------------------------------------
+All tests passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"control_test" end time: Jul 07 17:22 KST
+"control_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jul 07 17:22 KST
