@@ -64,7 +64,10 @@ CMAKE_BINARY_DIR = /home/kosta/client1/build
 
 # The main recursive "all" target.
 all: CMakeFiles/control.dir/all
+all: CMakeFiles/streaming.dir/all
 all: CMakeFiles/control_test.dir/all
+all: CMakeFiles/streaming_test.dir/all
+all: CMakeFiles/control_network_smoke.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -73,7 +76,10 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/control.dir/clean
+clean: CMakeFiles/streaming.dir/clean
 clean: CMakeFiles/control_test.dir/clean
+clean: CMakeFiles/streaming_test.dir/clean
+clean: CMakeFiles/control_network_smoke.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -103,13 +109,39 @@ CMakeFiles/control.dir/clean:
 .PHONY : CMakeFiles/control.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/streaming.dir
+
+# All Build rule for target.
+CMakeFiles/streaming.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/streaming.dir/build.make CMakeFiles/streaming.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/streaming.dir/build.make CMakeFiles/streaming.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kosta/client1/build/CMakeFiles --progress-num=7,8 "Built target streaming"
+.PHONY : CMakeFiles/streaming.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/streaming.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kosta/client1/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/streaming.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kosta/client1/build/CMakeFiles 0
+.PHONY : CMakeFiles/streaming.dir/rule
+
+# Convenience name for target.
+streaming: CMakeFiles/streaming.dir/rule
+.PHONY : streaming
+
+# clean rule for target.
+CMakeFiles/streaming.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/streaming.dir/build.make CMakeFiles/streaming.dir/clean
+.PHONY : CMakeFiles/streaming.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/control_test.dir
 
 # All Build rule for target.
 CMakeFiles/control_test.dir/all: CMakeFiles/control.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/control_test.dir/build.make CMakeFiles/control_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/control_test.dir/build.make CMakeFiles/control_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kosta/client1/build/CMakeFiles --progress-num=3,4 "Built target control_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kosta/client1/build/CMakeFiles --progress-num=5,6 "Built target control_test"
 .PHONY : CMakeFiles/control_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -127,6 +159,58 @@ control_test: CMakeFiles/control_test.dir/rule
 CMakeFiles/control_test.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/control_test.dir/build.make CMakeFiles/control_test.dir/clean
 .PHONY : CMakeFiles/control_test.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/streaming_test.dir
+
+# All Build rule for target.
+CMakeFiles/streaming_test.dir/all: CMakeFiles/streaming.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/streaming_test.dir/build.make CMakeFiles/streaming_test.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/streaming_test.dir/build.make CMakeFiles/streaming_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kosta/client1/build/CMakeFiles --progress-num=9,10 "Built target streaming_test"
+.PHONY : CMakeFiles/streaming_test.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/streaming_test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kosta/client1/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/streaming_test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kosta/client1/build/CMakeFiles 0
+.PHONY : CMakeFiles/streaming_test.dir/rule
+
+# Convenience name for target.
+streaming_test: CMakeFiles/streaming_test.dir/rule
+.PHONY : streaming_test
+
+# clean rule for target.
+CMakeFiles/streaming_test.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/streaming_test.dir/build.make CMakeFiles/streaming_test.dir/clean
+.PHONY : CMakeFiles/streaming_test.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/control_network_smoke.dir
+
+# All Build rule for target.
+CMakeFiles/control_network_smoke.dir/all: CMakeFiles/control.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/control_network_smoke.dir/build.make CMakeFiles/control_network_smoke.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/control_network_smoke.dir/build.make CMakeFiles/control_network_smoke.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kosta/client1/build/CMakeFiles --progress-num=3,4 "Built target control_network_smoke"
+.PHONY : CMakeFiles/control_network_smoke.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/control_network_smoke.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kosta/client1/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/control_network_smoke.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kosta/client1/build/CMakeFiles 0
+.PHONY : CMakeFiles/control_network_smoke.dir/rule
+
+# Convenience name for target.
+control_network_smoke: CMakeFiles/control_network_smoke.dir/rule
+.PHONY : control_network_smoke
+
+# clean rule for target.
+CMakeFiles/control_network_smoke.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/control_network_smoke.dir/build.make CMakeFiles/control_network_smoke.dir/clean
+.PHONY : CMakeFiles/control_network_smoke.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

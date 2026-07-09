@@ -1,0 +1,125 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug control_test",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/control_test",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "${workspaceFolder}/.vscode/gdb-wrapper.sh",
+            "miDebuggerArgs": "-iex \"set auto-load safe-path ${workspaceFolder}:/usr/share/gdb/auto-load\" -iex \"set debuginfod enabled off\"",
+            "preLaunchTask": "Build control_test",
+            "logging": {
+                "engineLogging": true,
+                "trace": true,
+                "traceResponse": true
+            },
+            "setupCommands": [
+                {
+                    "description": "Disable debuginfod prompt",
+                    "text": "set debuginfod enabled off",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Run control_test (no debugger)",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "./build/control_test",
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Build control_test"
+        },
+        {
+            "name": "Debug streaming_test",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/streaming_test",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "${workspaceFolder}/.vscode/gdb-wrapper.sh",
+            "miDebuggerArgs": "-iex \"set auto-load safe-path ${workspaceFolder}:/usr/share/gdb/auto-load\" -iex \"set debuginfod enabled off\"",
+            "preLaunchTask": "Build streaming_test",
+            "logging": {
+                "engineLogging": true,
+                "trace": true,
+                "traceResponse": true
+            },
+            "setupCommands": [
+                {
+                    "description": "Disable debuginfod prompt",
+                    "text": "set debuginfod enabled off",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Run streaming_test (no debugger)",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "./build/streaming_test",
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Build streaming_test"
+        },
+        {
+            "name": "Debug control_network_smoke",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/control_network_smoke",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "${workspaceFolder}/.vscode/gdb-wrapper.sh",
+            "miDebuggerArgs": "-iex \"set auto-load safe-path ${workspaceFolder}:/usr/share/gdb/auto-load\" -iex \"set debuginfod enabled off\"",
+            "preLaunchTask": "Build control_network_smoke",
+            "logging": {
+                "engineLogging": true,
+                "trace": true,
+                "traceResponse": true
+            },
+            "setupCommands": [
+                {
+                    "description": "Disable debuginfod prompt",
+                    "text": "set debuginfod enabled off",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Run Sprint 1 integration (no debugger)",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "./scripts/run_control_integration_test.sh",
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Build control_network_smoke"
+        }
+    ]
+}

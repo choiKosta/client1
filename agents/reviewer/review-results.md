@@ -1,29 +1,48 @@
 # Reviewer Review Results
 
-- Review date: 2026-07-07
+## Sprint 2
+
+- Review date: 2026-07-09
 - Reviewer: Reviewer Agent (automated)
+- Target: Streaming core implementation
 
-Integration/Acceptance test results:
+### Verification
 
-- Integration test: `scripts/run_control_integration_test.sh` — PASSED (mock server)
-- Protocol conformance: Partial (mock server returned expected response for `connect`)
+- `./scripts/run_tests.sh`: PASSED
+- `./scripts/run_control_integration_test.sh`: PASSED
 
-Findings:
-- Integration test executed against mock Control Protocol server; server responded with `status:200` and `session_id`.
-- Note: `ControlClient` implementation is currently a stub and does not perform TCP interactions; full end-to-end protocol conformance requires implementing networked client.
+### Acceptance Notes
 
-# Reviewer Review Results
+- Streaming core is testable without external RTSP dependencies through `IFrameSource`.
+- Retry behavior is covered for open failures and retry limit exhaustion.
+- Frame receive failure and invalid URL failure are classified with explicit error codes.
+- Existing Control Protocol integration remains green after Sprint 2 changes.
 
-이 파일은 Reviewer가 통합/코드 리뷰 결과를 기록하는 용도로 사용됩니다.
+### Findings
 
-## 리뷰 결과 예시
-- 리뷰 일자: 2026-07-07
-- 검토 대상: Sprint 1 개발 완료 코드
-- 주요 확인 사항:
-  - 기능 적합성: OK / 수정 필요
-  - 코드 스타일: OK / 수정 필요
-  - 테스트 결과: OK / 실패
-- 발견된 이슈:
-  - 없음
-- 추가 의견:
-  - 
+- No blocking build or test failures found.
+- This is not yet real RTSP/H.264 playback; it is the core abstraction and reliability layer needed before OpenCV/FFmpeg integration.
+
+---
+
+- Review date: 2026-07-09
+- Reviewer: Reviewer Agent (automated)
+- Target: Sprint 1 control core implementation
+
+## Verification
+
+- `./scripts/run_tests.sh`: PASSED
+- `./scripts/run_control_integration_test.sh`: PASSED
+
+## Acceptance Notes
+
+- Control Protocol `connect` command was verified through the mock TCP server.
+- C++ `ControlClient` now performs networked JSON-over-TCP connect verification through `control_network_smoke`.
+- Error handling is represented through `ErrorCode`, status/message fields, recommended actions, state transitions, and console logs.
+- Playback parameter validation is implemented for frame rate and resolution before sending `set_param`.
+
+## Findings
+
+- No blocking build or test failures found.
+- Remaining Sprint 1 product scope still requires Qt UI and real RTSP/H.264 playback implementation.
+- The mock server returns a success response for any parsed request, so full server-side command behavior still needs a richer integration fixture.

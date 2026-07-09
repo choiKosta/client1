@@ -1,19 +1,57 @@
-Start testing: Jul 07 17:22 KST
+Start testing: Jul 09 17:41 KST
 ----------------------------------------------------------
-1/1 Testing: control_test
-1/1 Test: control_test
+1/2 Testing: control_test
+1/2 Test: control_test
 Command: "/home/kosta/client1/build/control_test"
 Directory: /home/kosta/client1/build
-"control_test" start time: Jul 07 17:22 KST
+"control_test" start time: Jul 09 17:41 KST
 Output:
 ----------------------------------------------------------
+[INFO] connect requested: rtsp://127.0.0.1/stream/1
+[INFO] connected: s-10812913325556952356
+[ERROR] invalid RTSP URL - RTSP URL must start with rtsp://
+[INFO] connect requested: rtsp://127.0.0.1/stream/1
+[INFO] connected: s-10812913325556952356
+[INFO] playback settings updated
+[ERROR] invalid playback settings - Use a frame rate from 1 to 120 and a WIDTHxHEIGHT resolution
+[INFO] connect requested: rtsp://127.0.0.1/stream/1
+[INFO] connected: s-10812913325556952356
+[INFO] disconnect requested: s-10812913325556952356
+[INFO] disconnected
 All tests passed
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"control_test" end time: Jul 07 17:22 KST
+"control_test" end time: Jul 09 17:41 KST
 "control_test" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jul 07 17:22 KST
+2/2 Testing: streaming_test
+2/2 Test: streaming_test
+Command: "/home/kosta/client1/build/streaming_test"
+Directory: /home/kosta/client1/build
+"streaming_test" start time: Jul 09 17:41 KST
+Output:
+----------------------------------------------------------
+[INFO] stream start requested: rtsp://127.0.0.1/stream/1
+[INFO] stream opened
+[INFO] stream stopped after target frame count
+[INFO] stream start requested: rtsp://127.0.0.1/stream/1
+[WARN] stream open failed, retrying: mock open failure
+[INFO] stream opened
+[INFO] stream stopped after target frame count
+[INFO] stream start requested: rtsp://127.0.0.1/stream/1
+[WARN] stream open failed, retrying: mock open failure
+[INFO] stream start requested: rtsp://127.0.0.1/stream/1
+[INFO] stream opened
+Streaming tests passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"streaming_test" end time: Jul 09 17:41 KST
+"streaming_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jul 09 17:41 KST

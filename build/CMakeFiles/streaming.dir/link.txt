@@ -1,0 +1,2 @@
+/usr/bin/ar qc libstreaming.a CMakeFiles/streaming.dir/src/streaming/StreamClient.cpp.o
+/usr/bin/ranlib libstreaming.a

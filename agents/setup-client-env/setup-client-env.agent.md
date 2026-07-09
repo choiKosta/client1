@@ -14,6 +14,8 @@
   - `install-gtest.sh` : Google Test 설치 안내(또는 vcpkg 설치)
 
 - `setup-client-env.py` : (이미 포함) 스킬 마크다운의 bash 블록을 추출하여 실행 가능한 에이전트
+- `skills/` 디렉터리: 재현 가능한 환경 설정 작업을 skill 문서로 분리
+  - `vscode_run_debug.md` : VS Code Run and Debug 구성을 생성
 
 운영 규칙:
 - 모든 스크립트는 기본적으로 `--dry-run` 모드로 동작하여 실제 변경 없이 실행 예정 명령을 출력한다.
@@ -23,6 +25,11 @@
 검증 절차:
 1. 각 스크립트의 `--dry-run`을 실행하여 출력 확인
 2. 문제가 없으면 `--run`으로 실행 (권한 필요)
+3. Run and Debug 구성은 아래 명령으로 적용
+
+```bash
+python3 agents/setup-client-env/setup-client-env.py --apply-skill vscode_run_debug --run
+```
 
 파일 위치 예시:
 - `client1/agents/setup-client-env/scripts/install-system.sh`

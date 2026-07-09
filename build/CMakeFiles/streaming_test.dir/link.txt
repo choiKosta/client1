@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/streaming_test.dir/tests/streaming_test.cpp.o -o streaming_test  libstreaming.a 

@@ -140,6 +140,19 @@ control/fast:
 .PHONY : control/fast
 
 #=============================================================================
+# Target rules for targets named streaming
+
+# Build rule for target.
+streaming: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 streaming
+.PHONY : streaming
+
+# fast build rule for target.
+streaming/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/streaming.dir/build.make CMakeFiles/streaming.dir/build
+.PHONY : streaming/fast
+
+#=============================================================================
 # Target rules for targets named control_test
 
 # Build rule for target.
@@ -151,6 +164,32 @@ control_test: cmake_check_build_system
 control_test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/control_test.dir/build.make CMakeFiles/control_test.dir/build
 .PHONY : control_test/fast
+
+#=============================================================================
+# Target rules for targets named streaming_test
+
+# Build rule for target.
+streaming_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 streaming_test
+.PHONY : streaming_test
+
+# fast build rule for target.
+streaming_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/streaming_test.dir/build.make CMakeFiles/streaming_test.dir/build
+.PHONY : streaming_test/fast
+
+#=============================================================================
+# Target rules for targets named control_network_smoke
+
+# Build rule for target.
+control_network_smoke: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 control_network_smoke
+.PHONY : control_network_smoke
+
+# fast build rule for target.
+control_network_smoke/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/control_network_smoke.dir/build.make CMakeFiles/control_network_smoke.dir/build
+.PHONY : control_network_smoke/fast
 
 src/control/ControlClient.o: src/control/ControlClient.cpp.o
 .PHONY : src/control/ControlClient.o
@@ -176,6 +215,54 @@ src/control/ControlClient.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/control.dir/build.make CMakeFiles/control.dir/src/control/ControlClient.cpp.s
 .PHONY : src/control/ControlClient.cpp.s
 
+src/streaming/StreamClient.o: src/streaming/StreamClient.cpp.o
+.PHONY : src/streaming/StreamClient.o
+
+# target to build an object file
+src/streaming/StreamClient.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/streaming.dir/build.make CMakeFiles/streaming.dir/src/streaming/StreamClient.cpp.o
+.PHONY : src/streaming/StreamClient.cpp.o
+
+src/streaming/StreamClient.i: src/streaming/StreamClient.cpp.i
+.PHONY : src/streaming/StreamClient.i
+
+# target to preprocess a source file
+src/streaming/StreamClient.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/streaming.dir/build.make CMakeFiles/streaming.dir/src/streaming/StreamClient.cpp.i
+.PHONY : src/streaming/StreamClient.cpp.i
+
+src/streaming/StreamClient.s: src/streaming/StreamClient.cpp.s
+.PHONY : src/streaming/StreamClient.s
+
+# target to generate assembly for a file
+src/streaming/StreamClient.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/streaming.dir/build.make CMakeFiles/streaming.dir/src/streaming/StreamClient.cpp.s
+.PHONY : src/streaming/StreamClient.cpp.s
+
+tests/control_network_smoke.o: tests/control_network_smoke.cpp.o
+.PHONY : tests/control_network_smoke.o
+
+# target to build an object file
+tests/control_network_smoke.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/control_network_smoke.dir/build.make CMakeFiles/control_network_smoke.dir/tests/control_network_smoke.cpp.o
+.PHONY : tests/control_network_smoke.cpp.o
+
+tests/control_network_smoke.i: tests/control_network_smoke.cpp.i
+.PHONY : tests/control_network_smoke.i
+
+# target to preprocess a source file
+tests/control_network_smoke.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/control_network_smoke.dir/build.make CMakeFiles/control_network_smoke.dir/tests/control_network_smoke.cpp.i
+.PHONY : tests/control_network_smoke.cpp.i
+
+tests/control_network_smoke.s: tests/control_network_smoke.cpp.s
+.PHONY : tests/control_network_smoke.s
+
+# target to generate assembly for a file
+tests/control_network_smoke.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/control_network_smoke.dir/build.make CMakeFiles/control_network_smoke.dir/tests/control_network_smoke.cpp.s
+.PHONY : tests/control_network_smoke.cpp.s
+
 tests/control_test.o: tests/control_test.cpp.o
 .PHONY : tests/control_test.o
 
@@ -200,6 +287,30 @@ tests/control_test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/control_test.dir/build.make CMakeFiles/control_test.dir/tests/control_test.cpp.s
 .PHONY : tests/control_test.cpp.s
 
+tests/streaming_test.o: tests/streaming_test.cpp.o
+.PHONY : tests/streaming_test.o
+
+# target to build an object file
+tests/streaming_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/streaming_test.dir/build.make CMakeFiles/streaming_test.dir/tests/streaming_test.cpp.o
+.PHONY : tests/streaming_test.cpp.o
+
+tests/streaming_test.i: tests/streaming_test.cpp.i
+.PHONY : tests/streaming_test.i
+
+# target to preprocess a source file
+tests/streaming_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/streaming_test.dir/build.make CMakeFiles/streaming_test.dir/tests/streaming_test.cpp.i
+.PHONY : tests/streaming_test.cpp.i
+
+tests/streaming_test.s: tests/streaming_test.cpp.s
+.PHONY : tests/streaming_test.s
+
+# target to generate assembly for a file
+tests/streaming_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/streaming_test.dir/build.make CMakeFiles/streaming_test.dir/tests/streaming_test.cpp.s
+.PHONY : tests/streaming_test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -210,13 +321,25 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... control"
+	@echo "... control_network_smoke"
 	@echo "... control_test"
+	@echo "... streaming"
+	@echo "... streaming_test"
 	@echo "... src/control/ControlClient.o"
 	@echo "... src/control/ControlClient.i"
 	@echo "... src/control/ControlClient.s"
+	@echo "... src/streaming/StreamClient.o"
+	@echo "... src/streaming/StreamClient.i"
+	@echo "... src/streaming/StreamClient.s"
+	@echo "... tests/control_network_smoke.o"
+	@echo "... tests/control_network_smoke.i"
+	@echo "... tests/control_network_smoke.s"
 	@echo "... tests/control_test.o"
 	@echo "... tests/control_test.i"
 	@echo "... tests/control_test.s"
+	@echo "... tests/streaming_test.o"
+	@echo "... tests/streaming_test.i"
+	@echo "... tests/streaming_test.s"
 .PHONY : help
 
 

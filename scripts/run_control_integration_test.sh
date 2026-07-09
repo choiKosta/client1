@@ -14,6 +14,12 @@ echo "Running integration client..."
 $PY "$CLIENT" "rtsp://127.0.0.1/stream/1" || RC=$?
 RC=${RC:-0}
 
+if [ "$RC" -eq 0 ] && [ -x "$ROOT/build/control_network_smoke" ]; then
+  echo "Running C++ control network smoke..."
+  "$ROOT/build/control_network_smoke" || RC=$?
+  RC=${RC:-0}
+fi
+
 echo "Stopping server (PID $SERVER_PID)"
 kill $SERVER_PID 2>/dev/null || true
 wait $SERVER_PID 2>/dev/null || true

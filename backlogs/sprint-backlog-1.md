@@ -28,16 +28,21 @@
   - [ ] Google Test 기본 테스트 빌드 확인
 
 ## 개발자 Handoff 체크리스트
-- [ ] 기능 구현 완료
-- [ ] 단위 테스트 실행 및 결과 기록
-- [ ] 코드 스타일 및 빌드 확인
-- [ ] `agents/developer/test-results.md`에 결과 작성
+- [x] 기능 구현 완료 (Control Protocol core)
+- [x] 단위 테스트 실행 및 결과 기록
+- [x] 코드 스타일 및 빌드 확인
+- [x] `agents/developer/test-results.md`에 결과 작성
 
 ## 리뷰어 Handoff 체크리스트
-- [ ] 제출된 코드 리뷰
-- [ ] 통합 테스트 실행
-- [ ] 리뷰 결과 `agents/reviewer/review-results.md`에 작성
+- [x] 제출된 코드 리뷰
+- [x] 통합 테스트 실행
+- [x] 리뷰 결과 `agents/reviewer/review-results.md`에 작성
 - [ ] Scrum Master에게 결과 보고
+
+## 2026-07-09 진행 기록
+- 완료: Control Protocol core 구현, 상태/오류/로그 처리, playback 설정 검증, vcpkg toolchain 자동 연동, C++ 네트워크 smoke 검증.
+- 검증: `./scripts/run_tests.sh` 통과, `./scripts/run_control_integration_test.sh` 통과.
+- 잔여: Qt UI 및 실제 RTSP/H.264 디코딩/렌더링 파이프라인은 의존성/앱 골격 추가 후 후속 Sprint에서 구현 필요.
 
 ## 우선순위
 - P0: 서버 접속/해제, 스트리밍 재생, 에러 처리
